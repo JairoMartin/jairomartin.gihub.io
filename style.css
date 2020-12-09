@@ -1,134 +1,180 @@
 /* 
-Lab: Basics Grids and Flexbox
-=== Do not change CSS below === 
+
+=== FoodGo Lab ===
+
+Do not delete existing CSS
+
 */
 
+/* == Typography == */
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 1rem;
+    line-height: 1.29rem;
+}
+
+h2 {
+    font-size: 30pt;
+}
+
+header,
+footer {
+    color: #b56441;
+}
+
+a {
+    text-decoration: none;
+    color: #b56441;
+    font-size: 14pt;
+}
+
+#legal {
+    font-size: 10pt;
+    font-style: italic;
+}
+
+#nav a {
+    margin-right: 10px;
+    display: block;
+    background-color: orange;
+    text-align: center;
+    padding: 5px;
+}
+
+#nav a:hover {
+    color: #7d4700;
+}
+
+#splash {
+    text-align: center;
+    font-size: 48pt;
+    line-height: 60pt;
+    color: white;
+    text-shadow: 0px 0px 5px #6e6e6e;
+}
+
+footer {
+    font-style: italic;
+}
+
+/* Font Awesome icons */
+.fab {
+    font-size: 30pt;
+    margin-right: 10px;
+}
+
+.fab:hover {
+    color: ;
+}
+
+button {}
+
+/* == Background == */
+
+
+body {
+    background-color: #fcd303;
+}
+
+main {
+    background-color: #ffdd80;
+}
+
+#splash {
+    background-image: url(splash-backing.jpg);
+}
+
+/* == Box Model == */
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+footer {
+    padding: 10px;
+}
+
+header {
+    padding: 20px;
+}
+
+button {
+    border: 0;
+    background-color: #b56441;
+    color: #fff;
+    padding: 20px;
+    font-size: 30pt;
+    margin-top: 15px;
+}
+
+footer {
+    padding-top: 50px;
+}
+
+#splash {
+    height: 25rem;
+}
+
+#app {
+    height: 200px;
+}
+
+/* === Layout  === */
+
+
+/* = Grid =*/
+header,
+footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+#app {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#splash {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/* = Flexbox = */
+
+#app,
+#splash {
+    display: flex;
+}
+
+#app,
+#splash {
+    align-items: center;
+    justify-content: center;
+}
+
+/* = Other = */
 
 * {
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Helvetica', 'Arial', sans-serif;
-    font-size: 14pt;
-    line-height: 18pt;
-    background-color: #e0ff9e;
-    padding: 0;
-    margin: 0;
-    color: #052e00;
-
-}
-
-header {
-    padding: 40px 20px 40px 20px;
-    background-color: #9eb56e;
-}
-
-main {
-    padding: 20px;
-}
-
-footer {
-    padding: 0 50px;
-    background-color: #9eb56e;
-}
-
-nav a {
-    margin-right: 5px;
-}
-
-a {
-    text-decoration: none;
-    color: #1d7072;
-}
-
-h1 {
-    font-weight: normal;
-    font-size: 42pt;
-    color: #1d7072;
-    margin: 0 0;
-}
-
-
-.splash {
-    background-size: cover;
-    background-position: center top;
-    min-height: 300px;
-}
-
-#splashSection {
-    background-image: url(images/antique1.jpg);
-    background-position: center center;
-    height: 500px;
-}
-
-#splash2 {
-    background-image: url(images/antique5.jpg);
-}
-
-#splash3 {
-    background-image: url(images/antique3.jpg);
-}
-
-#splash4 {
-    background-image: url(images/antique4.jpg)
-}
-
-#splash5 {
-    background-image: url(images/antique6.jpg);
-}
-
-#splash6 {
-    background-image: url(images/antique2.jpg);
-}
-
-#antique-text-1,
-#antique-text-2 {
-    padding: 20px;
-    background-color: #ffe499;
-}
-
-/* === Add New CSS Below === */
-h1{
-    font-family: 'Fredoka One', cursive;
-
-}
-header{
-    display: grid;
-}
-header{
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-main{
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-row-gap: 25px;
-}
-footer{
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-nav{
+#social-media {
     text-align: right;
 }
-#antiques{
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
+
+#app {
+    text-align: center;
 }
-#splash2{
-    grid-column-start: 2;
-    grid-column-end: 4;
-}
-#splash3{
-    grid-column-start:5;
-    grid-column-end:7;
-}
-#splashSection{
-    display: flex;
-    align-items: center;
-    padding: 450px;
-}
-img{
-    align-items: right 400px;
+
+#mobile-menu{
+    position: fixed;
+    top: 10px;
+    left: 10px;
 }
